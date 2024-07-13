@@ -34,7 +34,7 @@ function Home() {
                     left={width / 2 - 35}
                     zIndex={2}
                     />
-                  <RoadMap month={12} progress={50} />
+                  <RoadMap month={12} progress={100} />
                 </View>
               </View>
             </ImageBackground>

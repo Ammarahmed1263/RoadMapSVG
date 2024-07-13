@@ -54,6 +54,7 @@ export function getCircles(month, startHeight, increment, width) {
 export const getSegmentedPaths = (path, progress, newCircles) => {
   const properties = new svgPathProperties(path);
   const totalLength = properties.getTotalLength();
+  // take the complementary because we progress from bottom EX.progress 25% will be 75%
   const progressLength = ((100 - progress) / 100) * totalLength;
 
   const commandPattern = /([a-zA-Z])([^a-zA-Z]*)/g;
@@ -109,9 +110,10 @@ export const getSegmentedPaths = (path, progress, newCircles) => {
 
       const isInProgress = accumulatedLength <= progressLength;
 
+      // reverse because we want to mark the bottom EX. 75% true will be false
       segments.push({
         path: `M${startX},${startY} ${currentPath}`,
-        isProgress: isInProgress,
+        isProgress: !isInProgress,
       });
 
       startX = currentX;

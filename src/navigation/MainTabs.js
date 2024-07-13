@@ -10,6 +10,7 @@ const Tab = createBottomTabNavigator();
 export default function MainTabs() {
   return (
     <Tab.Navigator
+      sceneContainerStyle= {{backgroundColor: 'white'}}
       screenOptions={{
         tabBarLabel: () => false,
         headerLeftContainerStyle: {marginLeft: 10, marginTop: 2},
