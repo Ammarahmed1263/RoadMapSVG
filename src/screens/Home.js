@@ -4,6 +4,7 @@ import RoadMap from '../components/RoadMap';
 import Vault from '../assets/vault.svg';
 import EndPoint from '../assets/finalPoint.svg';
 import Forest from '../assets/forest.svg';
+import Unlock from '../assets/startText.svg'
 
 
 
@@ -40,6 +41,7 @@ function Home() {
             </ImageBackground>
           </View>
           <View style={{zIndex: 1}}>
+            <Unlock width="100%" position='absolute' top={-70}/>
             <Forest width="100%" />
           </View>
         </ScrollView>
