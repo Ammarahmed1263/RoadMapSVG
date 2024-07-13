@@ -131,7 +131,7 @@ export const getSegmentedPaths = (path, progress, newCircles) => {
     const isInProgress = accumulatedLength <= progressLength;
     segments.push({
       path: `M${startX},${startY} ${currentPath}`,
-      isProgress: isInProgress,
+      isProgress: !isInProgress,
     });
   }
 
